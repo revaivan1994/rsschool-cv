@@ -15,13 +15,18 @@
          <header>
             <a class="logo" href="index.html"><img src="assets/img/snowflake.svg" alt="snowflake"><span>the
                   gifts</span></a>
-            <nav>
+            <nav id="main-nav">
                <a class="nav-link" href="#hero">HOME</a>
                <a class="nav-link" href="gifts.html">GIFTS</a>
                <a class="nav-link" href="#about">ABOUT</a>
                <a class="nav-link" href="#slider">SHOP</a>
                <a class="nav-link" href="#footer">CONTACTS</a>
             </nav>
+            <button class="burger" id="burger-btn" aria-label="Open menu" aria-expanded="false">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
          </header>
 
          <main>
@@ -107,20 +112,20 @@
             <section class="ready">
                <div class="ready-wrapper">
                   <h2 class="ready-subtitle">Ready to start your journey to a better version of yourself?</h2>
-               <a class="btn" href="gifts.html">Explore Magical Gifts</a>
-               <div class="ready-timer__title">
-                  The New Year is Coming Soon...
-               </div>
-               <div class="timer">
-                  <div class="timer-block"><span class="timer-num" id="days">47</span><span
-                        class="timer-label">Days</span></div>
-                  <div class="timer-block"><span class="timer-num" id="hours">5</span><span
-                        class="timer-label">Hours</span></div>
-                  <div class="timer-block"><span class="timer-num" id="minutes">34</span><span
-                        class="timer-label">Minutes</span></div>
-                  <div class="timer-block"><span class="timer-num" id="seconds">12</span><span
-                        class="timer-label">Seconds</span></div>
-               </div>
+                  <a class="btn" href="gifts.html">Explore Magical Gifts</a>
+                  <div class="ready-timer__title">
+                     The New Year is Coming Soon...
+                  </div>
+                  <div class="timer">
+                     <div class="timer-block"><span class="timer-num" id="days">47</span><span
+                           class="timer-label">Days</span></div>
+                     <div class="timer-block"><span class="timer-num" id="hours">5</span><span
+                           class="timer-label">Hours</span></div>
+                     <div class="timer-block"><span class="timer-num" id="minutes">34</span><span
+                           class="timer-label">Minutes</span></div>
+                     <div class="timer-block"><span class="timer-num" id="seconds">12</span><span
+                           class="timer-label">Seconds</span></div>
+                  </div>
                </div>
             </section>
          </main>
@@ -140,7 +145,11 @@
             </div>
             <div class="footer-card-wrapper">
                <div class="footer-card-wrapper__img"><img src="assets/img/snake.svg" alt="snake"></div>
-               <div class="footer-card-wrapper__contact"><a href="mailto:gifts@magic.com">gifts@magic.com</a></div>
+               <div class="footer-card-wrapper__contact"><a
+                     href="https://mail.google.com/mail/?view=cm&to=gifts@magic.com" target="_blank"
+                     rel="noopener noreferrer">
+                     gifts@magic.com
+                  </a></div>
                <div class="footer-card-wrapper__desc">write us</div>
             </div>
          </div>
@@ -158,6 +167,7 @@
          </div>
       </footer>
    </div>
+   <script src="index.js"></script>
 </body>
 
 </html>
