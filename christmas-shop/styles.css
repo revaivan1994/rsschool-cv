@@ -298,6 +298,7 @@ nav {
    padding-top: 20px;
    display: flex;
    align-items: center;
+   transition: transform 0.6s ease-in-out;
 }
 
 .slider-item__word {
@@ -331,14 +332,95 @@ nav {
 
 .slider-arrow {
    padding-top: 20px;
+   padding-right: 82px;
+   gap: 20px;
    display: flex;
    justify-content: end;
-   max-width: 1276px;
-   height: 56px;
+   text-align: center;
 }
 
+.slider-arrow__left,
 .slider-arrow__right {
-   padding-left: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.35s ease-in-out, border-color 0.35s ease-in-out;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.slider-arrow__left img,
+.slider-arrow__right img {
+  display: none;
+}
+
+.slider-arrow__left::after,
+.slider-arrow__right::after {
+  content: '';
+  position: absolute;
+  top: 51%;
+  width: 12.5px;
+  height: 1px;
+  background: #fff;
+  transform: translateY(-50%);
+  transition: background 0.35s ease-in-out;
+}
+
+
+.slider-arrow__left::before,
+.slider-arrow__right::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transition: border-color 0.35s ease-in-out;
+}
+
+
+.slider-arrow__left::after  { 
+   left: 20.5px; 
+}
+.slider-arrow__left::before { 
+   transform: rotate(-45deg); left: 21.5px; top: calc(50% - 4px); 
+}
+
+
+.slider-arrow__right::after  { 
+   right: 20.5px; 
+}
+.slider-arrow__right::before {
+    transform: rotate(135deg); right: 21.5px; top: calc(50% - 4px); 
+   }
+
+
+.slider-arrow__left:hover,
+.slider-arrow__right:hover {
+  background: #fff;
+  border-color: #fff;
+}
+
+.slider-arrow__left:hover::before,
+.slider-arrow__right:hover::before {
+  border-color: var(--primary);
+}
+
+.slider-arrow__left:hover::after,
+.slider-arrow__right:hover::after {
+  background: var(--primary);
+}
+
+.slider-arrow__left.disabled,
+.slider-arrow__right.disabled {
+  opacity: 0.35;
+  pointer-events: none;
 }
 
 .best {
